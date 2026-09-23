@@ -7,8 +7,8 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui, sans-serif}
 body{
-    background:#111;
-    color:#fff;
+    background:#000000;
+    color:#ffffff;
     max-width:420px;
     margin:0 auto;
     padding:32px 16px;
@@ -23,36 +23,43 @@ body{
     margin-bottom:24px
 }
 h1{
-    font-size:24px;
-    margin-bottom:8px
+    font-size:26px;
+    margin-bottom:10px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.45);
 }
 .artist-en{
-    font-size:16px;
-    font-weight:400;
-    opacity:0.8;
-    margin-bottom:6px
+    font-size:18px;
+    font-weight:500;
+    color:#ffffff;
+    margin-bottom:8px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
 }
 .artist-zh{
-    font-size:16px;
-    font-weight:400;
-    opacity:0.65;
-    margin-bottom:32px
+    font-size:18px;
+    font-weight:500;
+    color:#ffffff;
+    margin-bottom:32px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
 }
 a.button{
     display:flex;
     align-items:center;
     gap:14px;
-    background:#222;
-    color:#fff;
+    background:#111111;
+    color:#ffffff;
     text-decoration:none;
-    padding:14px 18px;
-    border-radius:9px;
-    margin-bottom:12px;
-    border:1px solid #333;
-    justify-content:flex-start;
+    padding:16px 18px;
+    border-radius:12px;
+    margin-bottom:14px;
+    border:1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+    justify-content:space-between;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 a.button:hover{
-    background:#333
+    background:#1c1c1c;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.45);
 }
 .platform-icon{
     width:24px;
@@ -61,6 +68,17 @@ a.button:hover{
     max-height:24px;
     object-fit:contain;
     flex-shrink:0;
+}
+.platform-left{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+.play-icon{
+    font-size:20px;
+    opacity:0.85;
+    font-weight:500;
+    line-height:1;
 }
 </style>
 </head>
@@ -73,46 +91,66 @@ a.button:hover{
 <br />
 <!-- 1. YouTube Music -->
 <a class="button" href="https://music.youtube.com/playlist?list=OLAK5uy_nVCJbHK0ZVqjUJ_J0T-Erepl5p4Pco3Qs">
-    <img class="platform-icon" src="images/YouTubeMusic_Logo.png" alt="YouTube Music">
-    <span>YouTube Music</span>
+    <div class="platform-left">
+        <img class="platform-icon" src="images/YouTubeMusic_Logo.png" alt="YouTube Music">
+        <span>YouTube Music</span>
+    </div>
+    <span class="play-icon">▶</span>
 </a>
 
 <!-- 2. Apple Music -->
 <a class="button" href="https://music.apple.com/hk/album/%E9%9B%AA%E7%8B%BC%E6%B9%96/1444026536">
-    <img class="platform-icon" src="images/Apple_Music_Logo.png" alt="Apple Music">
-    <span>Apple Music</span>
+    <div class="platform-left">
+        <img class="platform-icon" src="images/Apple_Music_Logo.png" alt="Apple Music">
+        <span>Apple Music</span>
+    </div>
+    <span class="play-icon">▶</span>
 </a>
 
 <!-- 3. Spotify -->
 <a class="button" href="https://open.spotify.com/album/6vqkvmiiCDC9TxxS27eUyx">
-    <img class="platform-icon" src="images/Spotify_Logo.png" alt="Spotify">
-    <span>Spotify</span>
+    <div class="platform-left">
+        <img class="platform-icon" src="images/Spotify_Logo.png" alt="Spotify">
+        <span>Spotify</span>
+    </div>
+    <span class="play-icon">▶</span>
 </a>
 
 <!-- 4. Joox -->
 <a class="button" href="https://www.joox.com/hk/album/xZYr7Nkp65nf4NM3GAzl0g==">
-    <img class="platform-icon" src="images/Joox_Logo.png" alt="Joox">
-    <span>Joox</span>
+    <div class="platform-left">
+        <img class="platform-icon" src="images/Joox_Logo.png" alt="Joox">
+        <span>Joox</span>
+    </div>
+    <span class="play-icon">▶</span>
 </a>
 
 <!-- 5. KKBox -->
 <a class="button" href="https://www.kkbox.com/hk/tc/album/0m6jtm77qw4InSReEU">
-    <img class="platform-icon" src="images/KKBox_logo.png" alt="KKBox">
-    <span>KKBox</span>
+    <div class="platform-left">
+        <img class="platform-icon" src="images/KKBox_logo.png" alt="KKBox">
+        <span>KKBox</span>
+    </div>
+    <span class="play-icon">▶</span>
 </a>
 
 <!-- 6. Moov - Chapter 1 -->
 <a class="button" href="https://moov.hk/share/appshare.jsp?pageid=11&profileId=VAUN00002549A">
-    <img class="platform-icon" src="images/Moov_Logo.png" alt="Moov Chapter 1">
-    <span>Moov - Chapter 1</span>
+    <div class="platform-left">
+        <img class="platform-icon" src="images/Moov_Logo.png" alt="Moov Chapter 1">
+        <span>Moov - Chapter 1</span>
+    </div>
+    <span class="play-icon">▶</span>
 </a>
 
 <!-- 7. Moov - Chapter 2 -->
 <a class="button" href="https://moov.hk/share/appshare.jsp?pageid=11&profileId=VAUN00002550A">
-    <img class="platform-icon" src="images/Moov_Logo.png" alt="Moov Chapter 2">
-    <span>Moov - Chapter 2</span>
+    <div class="platform-left">
+        <img class="platform-icon" src="images/Moov_Logo.png" alt="Moov Chapter 2">
+        <span>Moov - Chapter 2</span>
+    </div>
+    <span class="play-icon">▶</span>
 </a>
 
 </body>
 </html>
-<!-- （注：内容由AI生成） -->
